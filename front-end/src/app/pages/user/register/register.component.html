@@ -1,0 +1,26 @@
+<div class="border border-primary border-3 rounded-2 p-3">
+
+
+<form [formGroup]="registerForm"  (ngSubmit)="register()">
+    <div class="row">
+        <div class="col-6 mb-3 ">
+            <input class="form-control" placeholder="name" formControlName="name" >
+
+        </div>
+        
+
+        <div class="alert alert-danger" *ngIf="errMsg.name"> {{errMsg.name}}</div>
+        <div class="col-6 mb-3">
+            <input class="form-control" placeholder="email" formControlName="email">
+        </div>
+        <div class="alert alert-danger" *ngIf="errMsg.email"> {{errMsg.email}}</div>
+        <div class="col-6 mb-3">
+         <input class="form-control" placeholder="password" formControlName="password">
+        </div>
+        <div class="alert alert-danger" *ngIf="errMsg.password"> {{errMsg.password}}</div>
+        <div class="mb-3">
+            <button class="btn btn-primary ">Add user</button>
+        </div>
+    </div>
+</form>
+</div>

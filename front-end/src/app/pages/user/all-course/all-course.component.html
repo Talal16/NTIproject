@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let  course in allCoursesArray" (onsubmit)="courseContent()"> 
+            <div class="card" style="width: 18rem;">
+                <img src="course.url" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{course.title}}</h5>
+                  <p class="card-text">{{course.description}</p>
+                  <a href="#" class="btn btn-primary" (click)="courseContent()">Go to course</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
